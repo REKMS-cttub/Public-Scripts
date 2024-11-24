@@ -1,0 +1,65 @@
+--++==//|| Access ||\\==++--
+
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK"))()
+wait(1)
+OrionLib:MakeNotification({
+    Name = "BanCheck",
+    Content = "Checking",
+    Time = 5
+})    
+                
+local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
+
+wait(1)
+
+
+
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+local playerName = localPlayer.UserId
+
+_G.whitelistusers = {"first","second","third","fourth"}
+_G.blacklistusers = {"first","second","third"}
+
+local isInBanList = false
+local isWhiteList = false
+
+for _, name in pairs(blacklistusers) do
+    if playerName == name then
+        isInBanList = true
+        break
+    end
+end
+
+for _, name in pairs(whitelistusers) do
+    if playerName == name then
+        isWhiteList = true
+        break
+    end
+end
+
+if isInBanList then
+    wait(1)
+    OrionLib:MakeNotification({
+        Name = "BanCheck",
+        Content = "You have been banned from this script.",
+        Time = 5
+    })
+    return end
+elseif isWhiteList then
+    wait(1)
+    OrionLib:MakeNotification({
+        Name = "Whitelist-System",
+        Content = "Welcome!",
+        Time = 5
+    }) 
+else
+    wait(1)
+    OrionLib:MakeNotification({
+        Name = "BanCheck",
+        Content = "Success. Welcome~",
+        Time = 5
+    })
+end
