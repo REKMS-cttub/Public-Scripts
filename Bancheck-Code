@@ -20,7 +20,7 @@ local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 local playerName = localPlayer.UserId
 
-_G.whitelistusers = {"first","second","third","fourth"}
+_G.whitelistusers = {"wyslszak_CN","second","third","fourth"}
 _G.blacklistusers = {"first","second","third"}
 
 local isInBanList = false
