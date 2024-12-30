@@ -1,4 +1,6 @@
+print("Not-Authed Upload.Script is not by me")
 --[[
+SCRIPT IS NOT BY ME!
 	github: https://github.com/LorekeeperZinnia/Dex
 	
 	New Dex
